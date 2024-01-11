@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body  class="flexible-footer">
+    <header>
+        <h1>Datos de Contacto</h1>
+    </header>
+
+    <nav>
+        <button id="telefono">Teléfono</button>
+        <button id="email">Email</button>
+        <button id="linkedin">LinkedIn</button>
+    </nav>
+
+    <footer>
+        <p>Derechos reservados © 2024</p>
+    </footer>
+
+    <script>
+        // Evento para descargar el vCard
+        document.getElementById('telefono').addEventListener('click', function () {
+            var a = document.createElement('a');
+            a.href = 'DumitruNascoCiobanu.vcf';
+            a.download = 'DumitruNascoCiobanu.vcf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+
+        // Evento para abrir la aplicación de correo
+        document.getElementById('email').addEventListener('click', function () {
+            window.location.href = 'mailto:lainvega115@gmail.com';
+        });
+
+        // Evento para ir al perfil de LinkedIn
+        document.getElementById('linkedin').addEventListener('click', function () {
+            window.location.href = 'https://www.linkedin.com/in/lain-vega-ocaña-954a84172/';
+        });
+    </script>
+</body>
